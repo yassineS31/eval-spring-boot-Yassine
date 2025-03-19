@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "evalspring")
+@Table(name = "produit")
 public class Produit {
 
     @Id
@@ -23,6 +23,9 @@ public class Produit {
     @DecimalMin(value = "0.01",message = "Le prix doit être supérieur à 0 €")
     private double prix;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categorie")
+    private Categorie categorie;
     //Constructeurs :
     public Produit() {}
     public Produit(String nom, double prix) {

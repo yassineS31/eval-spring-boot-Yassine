@@ -14,4 +14,27 @@ public class Categorie {
     @NotBlank
     @Min(value = 2,message = "Le libele doit avoir au minimum 2 caractères")
     private String libele;
+
+    // Constructeurs
+    public Categorie() {}
+    public Categorie(String libele) {
+        this.libele = libele;
+    }
+    // Getters et Setters :
+
+    public String getLibele() {
+        return libele;
+    }
+
+    public void setLibele(String libele) {
+        this.libele = libele;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

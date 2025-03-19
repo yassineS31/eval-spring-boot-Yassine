@@ -27,7 +27,7 @@ public class ProduitService  {
     //Récupérer un produit par son Id
     public Produit getProduit(Integer id) {
         if(!produitRepository.existsById(id)){
-            throw new ProduitExist(produitRepository.findById(id).get());
+            throw new NoProduitFoundExcepetion(id);
         }
         return produitRepository.findById(id).get();
     }

@@ -11,7 +11,7 @@ public class Produit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "nom",nullable = false,length = 50)
     @NotBlank(message = "Le champs doit être rempli")
@@ -32,11 +32,11 @@ public class Produit {
     // Getters et Setters :
 
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
